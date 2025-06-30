@@ -1,0 +1,19 @@
+/* About Section */
+#about {
+  background-color: #eaf4fc; /* Light blue */
+}
+
+/* Projects Section */
+#projects {
+  background-color: #fef3c7; /* Warm yellow */
+}
+
+/* Skills Section */
+#skills {
+  background-color: #d1fae5; /* Minty green */
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f3f4f6; /* Soft gray */
+}
