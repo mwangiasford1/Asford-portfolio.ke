@@ -18,12 +18,39 @@ export default function Profile() {
           Culture-Driven Coder. Passionate about real-time tech, APIs, and creative coding.<br/>
           Experienced in Node.js, Python, and cloud platforms. Loves building scalable systems and collaborating with creative teams.
         </p>
-        <a href="/resume.pdf" download className="profile-resume-btn">
-          Download Resume
-        </a>
-        <Link to="/" className="profile-back-btn">
+        <Link to="/" className="profile-back">
           <FaArrowLeft style={{ marginRight: 6 }} /> Back to Portfolio
         </Link>
+        <div style={{ margin: '2rem 0', textAlign: 'center' }}>
+          <iframe
+            src="/src/assets/resume/Asford%20Mwangi%20Resume.pdf"
+            title="Asford Mwangi Resume"
+            width="100%"
+            height="600px"
+            style={{ border: '1px solid #eee', borderRadius: 8 }}
+          />
+          <a
+            href="/src/assets/resume/Asford%20Mwangi%20Resume.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              marginTop: 16,
+              background: '#6366f1',
+              color: '#fff',
+              padding: '0.75rem 2rem',
+              borderRadius: 8,
+              fontWeight: 600,
+              fontSize: 18,
+              textDecoration: 'none',
+              boxShadow: '0 2px 8px #6366f133',
+              transition: 'background 0.2s',
+            }}
+          >
+            Download Resume (PDF)
+          </a>
+        </div>
       </div>
       <div className="profile-socials-bottom">
         <a href="https://github.com/mwangiasford1" target="_blank" rel="noopener noreferrer" title="GitHub"><FaGithub /></a>
