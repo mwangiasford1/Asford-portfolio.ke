@@ -1,22 +1,11 @@
 import React from 'react';
-import './Portfolio.css'; // Create a CSS file for styling
+import './styles/Portfolio.css'; // Create a CSS file for styling
+import Activities from './components/Activities';
+import Topbar from './components/Topbar';
 const Portfolio = () => {
     return (
         <div className="portfolio-container">
-            <nav className="navbar">
-                <div className="nav-container">
-                    <div className="nav-logo">
-                        <span>AM</span>
-                    </div>
-                    <ul className="nav-menu">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+            <Topbar />
             
             <header>
                 <h1>Asford Mwangi</h1>
@@ -70,71 +59,142 @@ const Portfolio = () => {
             </section>
             
             <section id="projects">
-                <h2>🚀 All Projects</h2>
-                <div className="project">
-                    <h3>🎧 Vocal Sync</h3>
-                    <p><strong>Real-Time Lyric Synchronization App</strong></p>
-                    <p>A React-based app that syncs spoken or sung lyrics with preloaded Kikuyu text in real time using the Web Speech API.</p>
-                    <ul>
-                        <li><strong>Stack:</strong> React, Vite, Web Speech API, Tailwind, Node.js, Express, MongoDB</li>
-                        <li><strong>Highlights:</strong>
-                            <ul>
-                                <li>Accuracy scoring and word-by-word matching</li>
-                                <li>Custom lyric editor with live visualization</li>
-                                <li>Gentle backend support for alignment via Docker</li>
-                            </ul>
-                        </li>
-                        <li><strong>Impact:</strong> Preserves and promotes Kikuyu language through interactive tech</li>
-                    </ul>
-                    <p>🔗 <a href="#">Demo Link</a> · 📦 <a href="#">GitHub Repo</a></p>
+                <h2>🚀 Projects</h2>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+                  gap: '2.8rem',
+                  marginTop: '2.5rem',
+                }}>
+                  <div style={{
+                    background: '#fff',
+                    borderRadius: '18px',
+                    boxShadow: '0 4px 24px #6366f133',
+                    padding: '2.8rem 2.2rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    transition: 'transform 0.18s, box-shadow 0.18s',
+                  }}
+                  onMouseOver={e => {
+                    e.currentTarget.style.transform = 'translateY(-8px) scale(1.04)';
+                    e.currentTarget.style.boxShadow = '0 12px 40px #6366f144';
+                  }}
+                  onMouseOut={e => {
+                    e.currentTarget.style.transform = '';
+                    e.currentTarget.style.boxShadow = '0 4px 24px #6366f133';
+                  }}>
+                    <h3 style={{ marginBottom: 12, fontSize: '1.45rem' }}>barber_app</h3>
+                    <p style={{ color: '#555', marginBottom: 22, fontSize: '1.08rem' }}>Barbershop management system for appointments, user roles, and services.</p>
+                    <a href="https://github.com/mwangiasford1/barber_app.git" target="_blank" rel="noopener noreferrer" style={{
+                      background: '#232946', color: '#fff', borderRadius: 10, padding: '0.7rem 1.5rem', fontWeight: 600, textDecoration: 'none',
+                      fontSize: '1.08rem', transition: 'background 0.18s',
+                    }}>View on GitHub</a>
+                  </div>
+                  <div style={{
+                    background: '#fff',
+                    borderRadius: '14px',
+                    boxShadow: '0 2px 12px #6366f122',
+                    padding: '2rem 1.5rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    transition: 'transform 0.18s, box-shadow 0.18s',
+                  }}
+                  onMouseOver={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
+                  }}
+                  onMouseOut={e => {
+                    e.currentTarget.style.transform = '';
+                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
+                  }}>
+                    <h3 style={{ marginBottom: 8 }}>livestock_management_project-ME</h3>
+                    <p style={{ color: '#555', marginBottom: 18 }}>Livestock management platform for tracking and managing farm animals.</p>
+                    <a href="https://github.com/mwangiasford1/livestock_management_project-ME.git" target="_blank" rel="noopener noreferrer" style={{
+                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
+                      transition: 'background 0.18s',
+                    }}>View on GitHub</a>
+                  </div>
+                  <div style={{
+                    background: '#fff',
+                    borderRadius: '14px',
+                    boxShadow: '0 2px 12px #6366f122',
+                    padding: '2rem 1.5rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    transition: 'transform 0.18s, box-shadow 0.18s',
+                  }}
+                  onMouseOver={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
+                  }}
+                  onMouseOut={e => {
+                    e.currentTarget.style.transform = '';
+                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
+                  }}>
+                    <h3 style={{ marginBottom: 8 }}>parental-assistant-app</h3>
+                    <p style={{ color: '#555', marginBottom: 18 }}>Parental assistant app for managing family tasks and reminders.</p>
+                    <a href="https://github.com/mwangiasford1/parental-assistant-app.git" target="_blank" rel="noopener noreferrer" style={{
+                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
+                      transition: 'background 0.18s',
+                    }}>View on GitHub</a>
                 </div>
-                
-                <div className="project">
-                    <h3>🧪 Accuracy Scorer API</h3>
-                    <p><strong>A Scoring Microservice</strong></p>
-                    <p>Backend API that evaluates how closely user speech aligns with loaded lyrics.</p>
-                    <ul>
-                        <li><strong>Stack:</strong> Node.js, Express.js</li>
-                        <li><strong>Highlights:</strong>
-                            <ul>
-                                <li>Returns alignment scores with detailed feedback</li>
-                                <li>Designed to plug into Vocal Sync or similar tools</li>
-                            </ul>
-                        </li>
-                        <li><strong>Purpose:</strong> Provide feedback to enhance pronunciation and lyric mastery</li>
-                    </ul>
-                    <p>🔗 <a href="#">GitHub Repo</a> · 🧪 <a href="#">API Docs</a></p>
+                  <div style={{
+                    background: '#fff',
+                    borderRadius: '14px',
+                    boxShadow: '0 2px 12px #6366f122',
+                    padding: '2rem 1.5rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    transition: 'transform 0.18s, box-shadow 0.18s',
+                  }}
+                  onMouseOver={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
+                  }}
+                  onMouseOut={e => {
+                    e.currentTarget.style.transform = '';
+                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
+                  }}>
+                    <h3 style={{ marginBottom: 8 }}>PESANTE-ENTERPRICES</h3>
+                    <p style={{ color: '#555', marginBottom: 18 }}>Business management system for PESANTE ENTERPRICES.</p>
+                    <a href="https://github.com/mwangiasford1/PESANTE-ENTERPRICES.git" target="_blank" rel="noopener noreferrer" style={{
+                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
+                      transition: 'background 0.18s',
+                    }}>View on GitHub</a>
                 </div>
-                
-                <div className="project">
-                    <h3>✍️ Kikuyu Lyric Formatter</h3>
-                    <p><strong>A Lightweight Preparation Tool</strong></p>
-                    <p>CLI or web-based tool that converts Kikuyu lyrics into structured JSON chunks, prepped for real-time rendering and highlighting.</p>
-                    <ul>
-                        <li><strong>Stack:</strong> JavaScript / Python</li>
-                        <li><strong>Features:</strong>
-                            <ul>
-                                <li>Verse segmentation, normalization</li>
-                                <li>Supports tone markers and accent-sensitive parsing</li>
-                            </ul>
-                        </li>
-                        <li><strong>Use case:</strong> Streamlined prep for apps like Vocal Sync</li>
-                    </ul>
-                    <p>🔗 <a href="#">GitHub Repo</a></p>
+                  <div style={{
+                    background: '#fff',
+                    borderRadius: '14px',
+                    boxShadow: '0 2px 12px #6366f122',
+                    padding: '2rem 1.5rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    transition: 'transform 0.18s, box-shadow 0.18s',
+                  }}
+                  onMouseOver={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
+                  }}
+                  onMouseOut={e => {
+                    e.currentTarget.style.transform = '';
+                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
+                  }}>
+                    <h3 style={{ marginBottom: 8 }}>ai-climate-app</h3>
+                    <p style={{ color: '#555', marginBottom: 18 }}>AI-powered climate forecasting and analytics application.</p>
+                    <a href="https://github.com/mwangiasford1/ai-climate-app.git" target="_blank" rel="noopener noreferrer" style={{
+                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
+                      transition: 'background 0.18s',
+                    }}>View on GitHub</a>
                 </div>
-                
-                <div className="project">
-                    <h3>🌐 Cultural Speech Visualizer (Concept Prototype)</h3>
-                    <p><strong>Visual Feedback for Language Learning</strong></p>
-                    <p>Prototype that visually represents Kikuyu vowel strength and pitch while speaking, inspired by spectrograms and karaoke visuals.</p>
-                    <ul>
-                        <li><strong>Stack:</strong> Web Audio API, React, Canvas</li>
-                        <li><strong>Goal:</strong> Foster learning and engagement through culturally aware UI</li>
-                        <li><strong>Status:</strong> In design phase</li>
-                    </ul>
-                    <p>💡 Looking to explore tone-specific speech recognition</p>
                 </div>
             </section>
+
+            <Activities />
             
             <section id="blog">
                 <h2>Blog or Insights</h2>

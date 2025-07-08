@@ -1,19 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../App';
-import { FaSun, FaMoon, FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaSun, FaMoon, FaGithub, FaLinkedin, FaFacebook, FaBars, FaTimes, FaUser } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 
 const sections = [
   { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
-  { id: 'activities', label: 'Events' },
+  { id: 'activities', label: 'Activities' },
+  { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ];
 
 const Topbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [active, setActive] = useState('about');
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -44,6 +45,78 @@ const Topbar = () => {
 
   return (
     <nav className="topbar">
+      {/* Hamburger for mobile */}
+      <button
+        className="hamburger-btn"
+        style={{
+          display: 'none',
+          background: 'none',
+          border: 'none',
+          fontSize: 28,
+          cursor: 'pointer',
+          position: 'absolute',
+          left: 18,
+          top: 18,
+          zIndex: 1200,
+        }}
+        onClick={() => setMenuOpen(true)}
+        aria-label="Open menu"
+      >
+        <FaBars />
+      </button>
+      {/* Overlay menu */}
+      {menuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            background: 'rgba(0,0,0,0.85)',
+            zIndex: 2000,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <button
+            style={{
+              background: 'none',
+              border: 'none',
+              color: '#fff',
+              fontSize: 32,
+              position: 'absolute',
+              top: 24,
+              right: 28,
+              cursor: 'pointer',
+            }}
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <FaTimes />
+          </button>
+          <Link to="/profile" onClick={() => setMenuOpen(false)} style={{ color: '#fff', fontSize: 24, margin: 18, display: 'flex', alignItems: 'center', gap: 10 }}>Profile</Link>
+          {sections.map((section) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              onClick={e => {
+                e.preventDefault();
+                setMenuOpen(false);
+                handleNavClick(section.id);
+              }}
+              style={{ color: '#fff', fontSize: 22, margin: 14 }}
+            >
+              {section.label}
+            </a>
+          ))}
+          <Link to="/collaborators" onClick={() => setMenuOpen(false)} style={{ color: '#fff', fontSize: 22, margin: 14 }}>Collaborators</Link>
+        </div>
+      )}
+      {/* Desktop nav */}
       <div className="topbar-links nav-main">
         {sections.map((section) => (
           <a
@@ -58,11 +131,17 @@ const Topbar = () => {
             {section.label}
           </a>
         ))}
+        <Link to="/profile" className="nav-link-profile">Profile</Link>
         <Link to="/collaborators" className="nav-link-collaborators">Collaborators</Link>
       </div>
       <div className="topbar-divider"></div>
       <div className="topbar-logo" style={{ display: 'flex', alignItems: 'center', gap: 18, minWidth: 250 }}>
-        <span style={{ fontWeight: 700, fontSize: '1.2rem', letterSpacing: 1 }}>Asford Mwangi</span>
+        <span style={{ fontWeight: 700, fontSize: '1.2rem', letterSpacing: 1, display: 'inline-flex', alignItems: 'center' }} className="animated-logo">
+          {"Asford Mwangi".split("").map((char, idx) => (
+            <span key={idx} className="logo-letter" style={{ animationDelay: `${0.4 + idx * 0.12}s` }}>{char === ' ' ? '\u00A0' : char}</span>
+          ))}
+          <span className="logo-cursor">|</span>
+        </span>
       </div>
       {location.pathname !== '/profile' && (
         <div className="topbar-actions" style={{ display: 'flex', alignItems: 'center', gap: 18 }}>

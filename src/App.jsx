@@ -8,6 +8,8 @@ import Profile from './Profile';
 import Footer from './components/Footer';
 import Collaborators from './Collaborators';
 import Admin from './Admin';
+import Home from './Home';
+import Portfolio from './Portfolio';
 import './styles/Portfolio.css';
 
 export const ThemeContext = createContext();
@@ -21,17 +23,8 @@ function App() {
       <div className={theme === 'dark' ? 'theme-dark' : 'theme-light'}>
         <Router>
           <Routes>
-            <Route path="/" element={
-              <>
-                <Topbar />
-                <div className="main-container">
-                  <SidebarLeft />
-                  <MainFeed />
-                  <SidebarRight />
-                </div>
-                <Footer />
-              </>
-            } />
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/profile" element={<><Profile /><Footer /></>} />
             <Route path="/collaborators" element={<><Collaborators /><Footer /></>} />
             <Route path="/admin" element={<Admin />} />
