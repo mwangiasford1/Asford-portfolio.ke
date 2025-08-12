@@ -22,7 +22,7 @@ const SidebarLeft = () => (
         <a href="https://www.linkedin.com/in/asfordmwang" target="_blank" rel="noopener noreferrer" title="LinkedIn"><FaLinkedin /></a>
         <a href="https://www.facebook.com/Bro%20Richie%27s%20Richer" target="_blank" rel="noopener noreferrer" title="Facebook"><FaFacebook /></a>
       </div>
-      <a href="/src/assets/resume/Asford%20Mwangi%20Resume.pdf" download className="sidebar-resume-btn">
+      <a href="/Asford-Mwangi-Resume.pdf" download className="sidebar-resume-btn">
         <FaDownload style={{ marginRight: 6 }} /> Download Resume
       </a>
       <Link to="/profile" className="sidebar-resume-btn" style={{marginTop: 8, background: '#232946'}}>
@@ -33,7 +33,7 @@ const SidebarLeft = () => (
       </Link>
       <div style={{ textAlign: 'center', margin: '1.5rem 0' }}>
         <a
-          href="/src/assets/resume/Asford%20Mwangi%20Resume.pdf"
+          href="/Asford-Mwangi-Resume.pdf"
           download
           target="_blank"
           rel="noopener noreferrer"

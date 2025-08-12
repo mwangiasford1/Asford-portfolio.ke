@@ -25,7 +25,7 @@ export default function Profile() {
         </div>
         <div style={{ margin: '2rem 0 1rem 0', width: '100%' }}>
           <h2 style={{ fontSize: '1.3rem', marginBottom: 12 }}>Resume</h2>
-          <a href="/src/assets/resume/Asford%20Mwangi%20Resume.pdf" download className="profile-resume-btn">
+          <a href="/Asford-Mwangi-Resume.pdf" download className="profile-resume-btn">
             <FaDownload style={{ marginRight: 8 }} /> Download Resume
           </a>
         </div>
