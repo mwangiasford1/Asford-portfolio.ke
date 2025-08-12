@@ -7,7 +7,7 @@ const SidebarLeft = () => (
   <aside className="sidebar-left">
     <div className="sidebar-bio-card">
       <img
-        src="https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-1/500190982_4122371794686873_3495693403842944140_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeHer_srndQuKwcYsDnq8MSB0a0-P1d4iU_RrT4_V3iJTyXiSa8Ge0R78gHf4zfSfpyaguZmyH5q1AW-ingI0sVH&_nc_ohc=wC1XXDflguAQ7kNvwEsaKEz&_nc_oc=AdlBqAD3CW70M5IQnwEwesWQimbGosNtWPq_lgom9XS3BuhwcYBn9KHPWSqlPx7xvGA&_nc_zt=24&_nc_ht=scontent-mba2-1.xx&_nc_gid=rH-KR977-5gMLTdbw4sEtw&oh=00_AfQv212EsFh37K9H7YgwChnzFrEWyAAZVYqfce1ccub9Nw&oe=687327A6"
+        src="https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/518300583_4170082386582480_5398408323165624287_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE5m6HYVudqiRDvV7Dxhx22kR8cBdAOSHyRHxwF0A5IfLVmC2WDPeJhDkmpN1YwSKFsdsVqtNnZiTNJ0Og4Wopt&_nc_ohc=m7R4rUpIi-YQ7kNvwFkT0Ia&_nc_oc=AdniV61Q8C7lnJHbsn2p02AK2f2I5P8AXrcw2Hb4Az-cRpp9vTm7qKGDTnlMLkGysNs&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=HfHwD5PN9VYURWnn8Fj6GA&oh=00_AfUR2Muv6jBFys-bgNkWt8IIw7erfuQPr3IIGTGmnqdN-Q&oe=68A10EFB"
         alt="Asford Mwangi avatar"
         className="sidebar-profile-img"
       />
