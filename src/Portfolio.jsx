@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/Portfolio.css'; // Create a CSS file for styling
 import Activities from './components/Activities';
+import Contact from './components/Contact';
 import Topbar from './components/Topbar';
 const Portfolio = () => {
     return (
@@ -205,9 +206,21 @@ const Portfolio = () => {
                 </ul>
             </section>
             
-            <footer id="contact">
-                <h2>Contact</h2>
-                <p>Let's create something expressive. You can reach me at <a href="mailto:your-email@example.com">your-email@example.com</a> or connect on <a href="#">LinkedIn</a> / <a href="#">GitHub</a>.</p>
+            <Contact />
+            
+            <footer>
+                <h2>Let's Connect</h2>
+                <p>Let's create something expressive together!</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', marginTop: '2rem' }}>
+                    <p><strong>Email:</strong> <a href="mailto:asfordmwangi@gmail.com">asfordmwangi@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+254740953975">+254 740 953 975</a></p>
+                    <p><strong>Location:</strong> Nairobi, Kenya</p>
+                    <div style={{ display: 'flex', gap: '2rem', marginTop: '1rem' }}>
+                        <a href="https://github.com/mwangiasford1" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/asfordmwang" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.facebook.com/Bro%20Richie%27s%20Richer" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    </div>
+                </div>
             </footer>
         </div>
     );

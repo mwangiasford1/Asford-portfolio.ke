@@ -135,8 +135,8 @@ const Topbar = () => {
         <Link to="/collaborators" className="nav-link-collaborators">Collaborators</Link>
       </div>
       <div className="topbar-divider"></div>
-      <div className="topbar-logo" style={{ display: 'flex', alignItems: 'center', gap: 18, minWidth: 250 }}>
-        <span style={{ fontWeight: 700, fontSize: '1.2rem', letterSpacing: 1, display: 'inline-flex', alignItems: 'center' }} className="animated-logo">
+      <div className="topbar-logo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, minWidth: 250 }}>
+        <span style={{ fontWeight: 700, fontSize: '1.2rem', letterSpacing: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} className="animated-logo">
           {"Asford Mwangi".split("").map((char, idx) => (
             <span key={idx} className="logo-letter" style={{ animationDelay: `${0.4 + idx * 0.12}s` }}>{char === ' ' ? '\u00A0' : char}</span>
           ))}

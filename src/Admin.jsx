@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const initialCollaborators = [
   { name: 'Asford Mwangi', role: 'Backend Engineer', github: 'https://github.com/mwangiasford1', linkedin: 'https://www.linkedin.com/in/asfordmwang' },
@@ -286,7 +287,7 @@ export default function Admin() {
       <div style={{ maxWidth: 900, margin: '0 auto', background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px #6366f133', padding: '2.5rem 2.2rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 }}>
           <h2 style={{ fontSize: '2rem', color: '#6366f1' }}>Admin Portal</h2>
-          {/* Removed handleLogout button */}
+          <Link to="/" style={{ background: '#6366f1', color: '#fff', padding: '0.5rem 1rem', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Back to Home</Link>
         </div>
         <div style={{ marginBottom: 36 }}>
           <h3 style={{ fontSize: '1.3rem', marginBottom: 16 }}>Collaborators</h3>
