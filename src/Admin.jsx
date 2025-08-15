@@ -284,7 +284,7 @@ export default function Admin() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', padding: '2.5rem 0' }}>
-      <div style={{ maxWidth: 900, margin: '0 auto', background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px #6366f133', padding: '2.5rem 2.2rem', marginLeft: '1rem', marginRight: '1rem' }}>
+      <div style={{ maxWidth: 900, margin: '0 auto', background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px #6366f133', padding: '2.5rem 2.2rem', marginLeft: '1rem', marginRight: '1rem', overflowWrap: 'break-word', wordWrap: 'break-word', overflow: 'hidden' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 }}>
           <h2 style={{ fontSize: '2rem', color: '#6366f1' }}>Admin Portal</h2>
           <Link to="/" style={{ background: '#6366f1', color: '#fff', padding: '0.5rem 1rem', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Back to Home</Link>
