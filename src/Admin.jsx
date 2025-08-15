@@ -284,14 +284,14 @@ export default function Admin() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', padding: '2.5rem 0' }}>
-      <div style={{ maxWidth: 900, margin: '0 auto', background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px #6366f133', padding: '2.5rem 2.2rem' }}>
+      <div style={{ maxWidth: 900, margin: '0 auto', background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px #6366f133', padding: '2.5rem 2.2rem', marginLeft: '1rem', marginRight: '1rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 }}>
           <h2 style={{ fontSize: '2rem', color: '#6366f1' }}>Admin Portal</h2>
           <Link to="/" style={{ background: '#6366f1', color: '#fff', padding: '0.5rem 1rem', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>Back to Home</Link>
         </div>
         <div style={{ marginBottom: 36 }}>
           <h3 style={{ fontSize: '1.3rem', marginBottom: 16 }}>Collaborators</h3>
-          <form onSubmit={handleAdd} style={{ display: 'flex', gap: 12, marginBottom: 18 }}>
+          <form onSubmit={handleAdd} style={{ display: 'flex', gap: 12, marginBottom: 18, flexWrap: 'wrap' }}>
             <input type="text" placeholder="Name" value={newCol.name} onChange={e => setNewCol({ ...newCol, name: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="text" placeholder="Role" value={newCol.role} onChange={e => setNewCol({ ...newCol, role: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="url" placeholder="GitHub" value={newCol.github} onChange={e => setNewCol({ ...newCol, github: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
@@ -334,7 +334,7 @@ export default function Admin() {
         </div>
         <div style={{ marginBottom: 36 }}>
           <h3 style={{ fontSize: '1.3rem', marginBottom: 16 }}>Event Projects</h3>
-          <form onSubmit={handleAddEvent} style={{ display: 'flex', gap: 12, marginBottom: 18 }}>
+          <form onSubmit={handleAddEvent} style={{ display: 'flex', gap: 12, marginBottom: 18, flexWrap: 'wrap' }}>
             <input type="text" placeholder="Title" value={newEvent.title} onChange={e => setNewEvent({ ...newEvent, title: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="text" placeholder="Description" value={newEvent.description} onChange={e => setNewEvent({ ...newEvent, description: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="url" placeholder="Link (optional)" value={newEvent.link} onChange={e => setNewEvent({ ...newEvent, link: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
@@ -370,7 +370,7 @@ export default function Admin() {
         </div>
         <div style={{ marginBottom: 36 }}>
           <h3 style={{ fontSize: '1.3rem', marginBottom: 16 }}>Activities</h3>
-          <form onSubmit={handleAddActivity} style={{ display: 'flex', gap: 12, marginBottom: 18 }}>
+          <form onSubmit={handleAddActivity} style={{ display: 'flex', gap: 12, marginBottom: 18, flexWrap: 'wrap' }}>
             <input type="text" placeholder="Title" value={newActivity.title} onChange={e => setNewActivity({ ...newActivity, title: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="text" placeholder="Description" value={newActivity.description} onChange={e => setNewActivity({ ...newActivity, description: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <button type="submit" style={{ background: '#34d399', color: '#fff', border: 'none', borderRadius: 8, padding: '0.6rem 1.2rem', fontWeight: 600, fontSize: 15, cursor: 'pointer', boxShadow: '0 2px 8px #34d39922' }}>Add</button>
@@ -403,7 +403,7 @@ export default function Admin() {
         </div>
         <div style={{ marginBottom: 36 }}>
           <h3 style={{ fontSize: '1.3rem', marginBottom: 16 }}>Blog Posts</h3>
-          <form onSubmit={handleAddBlogPost} style={{ display: 'flex', gap: 12, marginBottom: 18 }}>
+          <form onSubmit={handleAddBlogPost} style={{ display: 'flex', gap: 12, marginBottom: 18, flexWrap: 'wrap' }}>
             <input type="text" placeholder="Title" value={newBlogPost.title} onChange={e => setNewBlogPost({ ...newBlogPost, title: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="text" placeholder="Content" value={newBlogPost.content} onChange={e => setNewBlogPost({ ...newBlogPost, content: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="url" placeholder="Link (optional)" value={newBlogPost.link} onChange={e => setNewBlogPost({ ...newBlogPost, link: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
@@ -439,7 +439,7 @@ export default function Admin() {
         </div>
         <div style={{ marginBottom: 36 }}>
           <h3 style={{ fontSize: '1.3rem', marginBottom: 16 }}>Insights</h3>
-          <form onSubmit={handleAddInsight} style={{ display: 'flex', gap: 12, marginBottom: 18 }}>
+          <form onSubmit={handleAddInsight} style={{ display: 'flex', gap: 12, marginBottom: 18, flexWrap: 'wrap' }}>
             <input type="text" placeholder="Title" value={newInsight.title} onChange={e => setNewInsight({ ...newInsight, title: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="text" placeholder="Content" value={newInsight.content} onChange={e => setNewInsight({ ...newInsight, content: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
             <input type="url" placeholder="Link (optional)" value={newInsight.link} onChange={e => setNewInsight({ ...newInsight, link: e.target.value })} style={{ padding: '0.6rem 1rem', borderRadius: 8, border: '1.5px solid #e0e0e0', fontSize: 15 }} />
