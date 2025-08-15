@@ -210,12 +210,18 @@ const Portfolio = () => {
                     e.currentTarget.style.transform = '';
                     e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
                   }}>
-                    <h3 style={{ marginBottom: 8 }}>file-organizer</h3>
+                    <h3 style={{ marginBottom: 8 }}>Smart File Manager</h3>
                     <p style={{ color: '#555', marginBottom: 18 }}>Automated file organization tool for managing and sorting files efficiently.</p>
-                    <a href="https://github.com/mwangiasford1/file-organizer.git" target="_blank" rel="noopener noreferrer" style={{
-                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                      transition: 'background 0.18s',
-                    }}>View on GitHub</a>
+                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                      <a href="https://smart-file-manager-6tqp.onrender.com" target="_blank" rel="noopener noreferrer" style={{
+                        background: '#10b981', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
+                        transition: 'background 0.18s',
+                      }}>Live Demo</a>
+                      <a href="https://github.com/mwangiasford1/file_manager.git" target="_blank" rel="noopener noreferrer" style={{
+                        background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
+                        transition: 'background 0.18s',
+                      }}>View on GitHub</a>
+                    </div>
                 </div>
                 </div>
             </section>
