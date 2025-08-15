@@ -162,10 +162,16 @@ const Portfolio = () => {
                   }}>
                     <h3 style={{ marginBottom: 8 }}>PESANTE-ENTERPRICES</h3>
                     <p style={{ color: '#555', marginBottom: 18 }}>Business management system for PESANTE ENTERPRICES.</p>
-                    <a href="https://github.com/mwangiasford1/PESANTE-ENTERPRICES.git" target="_blank" rel="noopener noreferrer" style={{
-                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                      transition: 'background 0.18s',
-                    }}>View on GitHub</a>
+                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                      <a href="https://pesante-enterprices-main-1.onrender.com/" target="_blank" rel="noopener noreferrer" style={{
+                        background: '#10b981', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
+                        transition: 'background 0.18s',
+                      }}>Live Demo</a>
+                      <a href="https://github.com/mwangiasford1/PESANTE-ENTERPRICES.git" target="_blank" rel="noopener noreferrer" style={{
+                        background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
+                        transition: 'background 0.18s',
+                      }}>View on GitHub</a>
+                    </div>
                 </div>
                   <div style={{
                     background: '#fff',
