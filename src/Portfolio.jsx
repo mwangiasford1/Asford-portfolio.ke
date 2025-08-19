@@ -60,177 +60,71 @@ const Portfolio = () => {
             </section>
             
             <section id="projects">
-                <h2>🚀 Projects</h2>
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-                  gap: '2.8rem',
-                  marginTop: '2.5rem',
-                }}>
-                  <div style={{
-                    background: '#fff',
-                    borderRadius: '18px',
-                    boxShadow: '0 4px 24px #6366f133',
-                    padding: '2.8rem 2.2rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    transition: 'transform 0.18s, box-shadow 0.18s',
-                  }}
-                  onMouseOver={e => {
-                    e.currentTarget.style.transform = 'translateY(-8px) scale(1.04)';
-                    e.currentTarget.style.boxShadow = '0 12px 40px #6366f144';
-                  }}
-                  onMouseOut={e => {
-                    e.currentTarget.style.transform = '';
-                    e.currentTarget.style.boxShadow = '0 4px 24px #6366f133';
-                  }}>
-                    <h3 style={{ marginBottom: 12, fontSize: '1.45rem' }}>barber_app</h3>
-                    <p style={{ color: '#555', marginBottom: 22, fontSize: '1.08rem' }}>Barbershop management system for appointments, user roles, and services.</p>
-                    <a href="https://github.com/mwangiasford1/barber_app.git" target="_blank" rel="noopener noreferrer" style={{
-                      background: '#232946', color: '#fff', borderRadius: 10, padding: '0.7rem 1.5rem', fontWeight: 600, textDecoration: 'none',
-                      fontSize: '1.08rem', transition: 'background 0.18s',
-                    }}>View on GitHub</a>
-                  </div>
-                  <div style={{
-                    background: '#fff',
-                    borderRadius: '14px',
-                    boxShadow: '0 2px 12px #6366f122',
-                    padding: '2rem 1.5rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    transition: 'transform 0.18s, box-shadow 0.18s',
-                  }}
-                  onMouseOver={e => {
-                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
-                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
-                  }}
-                  onMouseOut={e => {
-                    e.currentTarget.style.transform = '';
-                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
-                  }}>
-                    <h3 style={{ marginBottom: 8 }}>livestock_management_project-ME</h3>
-                    <p style={{ color: '#555', marginBottom: 18 }}>Livestock management platform for tracking and managing farm animals.</p>
-                    <a href="https://github.com/mwangiasford1/livestock_management_project-ME.git" target="_blank" rel="noopener noreferrer" style={{
-                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                      transition: 'background 0.18s',
-                    }}>View on GitHub</a>
-                  </div>
-                  <div style={{
-                    background: '#fff',
-                    borderRadius: '14px',
-                    boxShadow: '0 2px 12px #6366f122',
-                    padding: '2rem 1.5rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    transition: 'transform 0.18s, box-shadow 0.18s',
-                  }}
-                  onMouseOver={e => {
-                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
-                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
-                  }}
-                  onMouseOut={e => {
-                    e.currentTarget.style.transform = '';
-                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
-                  }}>
-                    <h3 style={{ marginBottom: 8 }}>parental-assistant-app</h3>
-                    <p style={{ color: '#555', marginBottom: 18 }}>Parental assistant app for managing family tasks and reminders.</p>
-                    <a href="https://github.com/mwangiasford1/parental-assistant-app.git" target="_blank" rel="noopener noreferrer" style={{
-                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                      transition: 'background 0.18s',
-                    }}>View on GitHub</a>
-                </div>
-                  <div style={{
-                    background: '#fff',
-                    borderRadius: '14px',
-                    boxShadow: '0 2px 12px #6366f122',
-                    padding: '2rem 1.5rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    transition: 'transform 0.18s, box-shadow 0.18s',
-                  }}
-                  onMouseOver={e => {
-                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
-                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
-                  }}
-                  onMouseOut={e => {
-                    e.currentTarget.style.transform = '';
-                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
-                  }}>
-                    <h3 style={{ marginBottom: 8 }}>PESANTE-ENTERPRICES</h3>
-                    <p style={{ color: '#555', marginBottom: 18 }}>Business management system for PESANTE ENTERPRICES.</p>
-                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                      <a href="https://pesante-enterprices-main-1.onrender.com/" target="_blank" rel="noopener noreferrer" style={{
-                        background: '#10b981', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                        transition: 'background 0.18s',
-                      }}>Live Demo</a>
-                      <a href="https://github.com/mwangiasford1/PESANTE-ENTERPRICES.git" target="_blank" rel="noopener noreferrer" style={{
-                        background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                        transition: 'background 0.18s',
-                      }}>View on GitHub</a>
-                    </div>
-                </div>
-                  <div style={{
-                    background: '#fff',
-                    borderRadius: '14px',
-                    boxShadow: '0 2px 12px #6366f122',
-                    padding: '2rem 1.5rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    transition: 'transform 0.18s, box-shadow 0.18s',
-                  }}
-                  onMouseOver={e => {
-                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
-                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
-                  }}
-                  onMouseOut={e => {
-                    e.currentTarget.style.transform = '';
-                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
-                  }}>
-                    <h3 style={{ marginBottom: 8 }}>ai-climate-app</h3>
-                    <p style={{ color: '#555', marginBottom: 18 }}>AI-powered climate forecasting and analytics application.</p>
-                    <a href="https://github.com/mwangiasford1/ai-climate-app.git" target="_blank" rel="noopener noreferrer" style={{
-                      background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                      transition: 'background 0.18s',
-                    }}>View on GitHub</a>
-                </div>
-                  <div style={{
-                    background: '#fff',
-                    borderRadius: '14px',
-                    boxShadow: '0 2px 12px #6366f122',
-                    padding: '2rem 1.5rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    transition: 'transform 0.18s, box-shadow 0.18s',
-                  }}
-                  onMouseOver={e => {
-                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.03)';
-                    e.currentTarget.style.boxShadow = '0 8px 32px #6366f133';
-                  }}
-                  onMouseOut={e => {
-                    e.currentTarget.style.transform = '';
-                    e.currentTarget.style.boxShadow = '0 2px 12px #6366f122';
-                  }}>
-                    <h3 style={{ marginBottom: 8 }}>Smart File Manager</h3>
-                    <p style={{ color: '#555', marginBottom: 18 }}>Automated file organization tool for managing and sorting files efficiently.</p>
-                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                      <a href="https://smart-file-manager-6tqp.onrender.com" target="_blank" rel="noopener noreferrer" style={{
-                        background: '#10b981', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                        transition: 'background 0.18s',
-                      }}>Live Demo</a>
-                      <a href="https://github.com/mwangiasford1/file_manager.git" target="_blank" rel="noopener noreferrer" style={{
-                        background: '#232946', color: '#fff', borderRadius: 8, padding: '0.5rem 1.1rem', fontWeight: 500, textDecoration: 'none',
-                        transition: 'background 0.18s',
-                      }}>View on GitHub</a>
-                    </div>
-                </div>
-                </div>
-            </section>
+    <h2>🚀 Projects</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        {/* Project Card Example */}
+        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+            <h3 className="mb-3 text-xl font-semibold">barber_app</h3>
+            <p className="text-gray-700 mb-5 text-base">Barbershop management system for appointments, user roles, and services.</p>
+            <a href="https://github.com/mwangiasford1/barber_app.git" target="_blank" rel="noopener noreferrer"
+                className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
+                View on GitHub
+            </a>
+        </div>
+        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+            <h3 className="mb-3 text-xl font-semibold">livestock_management_project-ME</h3>
+            <p className="text-gray-700 mb-5 text-base">Livestock management platform for tracking and managing farm animals.</p>
+            <a href="https://github.com/mwangiasford1/livestock_management_project-ME.git" target="_blank" rel="noopener noreferrer"
+                className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
+                View on GitHub
+            </a>
+        </div>
+        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+            <h3 className="mb-3 text-xl font-semibold">parental-assistant-app</h3>
+            <p className="text-gray-700 mb-5 text-base">Parental assistant app for managing family tasks and reminders.</p>
+            <a href="https://github.com/mwangiasford1/parental-assistant-app.git" target="_blank" rel="noopener noreferrer"
+                className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
+                View on GitHub
+            </a>
+        </div>
+        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+            <h3 className="mb-3 text-xl font-semibold">PESANTE-ENTERPRICES</h3>
+            <p className="text-gray-700 mb-5 text-base">Business management system for PESANTE ENTERPRICES.</p>
+            <div className="flex gap-2 flex-wrap">
+                <a href="https://pesante-enterprices-main-1.onrender.com/" target="_blank" rel="noopener noreferrer"
+                    className="bg-green-600 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-green-500 transition">
+                    Live Demo
+                </a>
+                <a href="https://github.com/mwangiasford1/PESANTE-ENTERPRICES.git" target="_blank" rel="noopener noreferrer"
+                    className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+            <h3 className="mb-3 text-xl font-semibold">ai-climate-app</h3>
+            <p className="text-gray-700 mb-5 text-base">AI-powered climate forecasting and analytics application.</p>
+            <a href="https://github.com/mwangiasford1/ai-climate-app.git" target="_blank" rel="noopener noreferrer"
+                className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
+                View on GitHub
+            </a>
+        </div>
+        <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+            <h3 className="mb-3 text-xl font-semibold">Smart File Manager</h3>
+            <p className="text-gray-700 mb-5 text-base">Automated file organization tool for managing and sorting files efficiently.</p>
+            <div className="flex gap-2 flex-wrap">
+                <a href="https://smart-file-manager-6tqp.onrender.com" target="_blank" rel="noopener noreferrer"
+                    className="bg-green-600 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-green-500 transition">
+                    Live Demo
+                </a>
+                <a href="https://github.com/mwangiasford1/file_manager.git" target="_blank" rel="noopener noreferrer"
+                    className="bg-gray-900 text-white rounded-lg px-4 py-2 font-semibold text-base hover:bg-gray-700 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
             <Activities />
             
@@ -246,19 +140,19 @@ const Portfolio = () => {
             <Contact />
             
             <footer>
-                <h2>Let's Connect</h2>
-                <p>Let's create something expressive together!</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', marginTop: '2rem' }}>
-                    <p><strong>Email:</strong> <a href="mailto:asfordmwangi@gmail.com">asfordmwangi@gmail.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+254740953975">+254 740 953 975</a></p>
-                    <p><strong>Location:</strong> Nairobi, Kenya</p>
-                    <div style={{ display: 'flex', gap: '2rem', marginTop: '1rem' }}>
-                        <a href="https://github.com/mwangiasford1" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://www.linkedin.com/in/asfordmwang" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="https://www.facebook.com/Bro%20Richie%27s%20Richer" target="_blank" rel="noopener noreferrer">Facebook</a>
-                    </div>
-                </div>
-            </footer>
+    <h2>Let's Connect</h2>
+    <p>Let's create something expressive together!</p>
+    <div className="flex flex-col gap-4 items-center mt-8">
+        <p><strong>Email:</strong> <a href="mailto:asfordmwangi@gmail.com">asfordmwangi@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+254740953975">+254 740 953 975</a></p>
+        <p><strong>Location:</strong> Nairobi, Kenya</p>
+        <div className="flex gap-8 mt-4 flex-wrap justify-center">
+            <a href="https://github.com/mwangiasford1" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/asfordmwang" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.facebook.com/Bro%20Richie%27s%20Richer" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+    </div>
+</footer>
         </div>
     );
 };

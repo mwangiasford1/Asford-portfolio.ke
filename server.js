@@ -3,6 +3,7 @@ import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import fs from 'fs';
+import path from 'path';
 
 dotenv.config();
 
@@ -21,7 +22,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const CONTACT_FILE = 'contactSubmissions.json';
+const CONTACT_FILE = path.join(__dirname, 'contactSubmissions.json');
 
 // Load submissions from file on server start
 let contactSubmissions = [];
@@ -37,7 +38,11 @@ if (fs.existsSync(CONTACT_FILE)) {
 
 // Helper to save submissions to file
 function saveSubmissions() {
-  fs.writeFileSync(CONTACT_FILE, JSON.stringify(contactSubmissions, null, 2));
+  try {
+    fs.writeFileSync(CONTACT_FILE, JSON.stringify(contactSubmissions, null, 2));
+  } catch (err) {
+    console.error('Failed to save contact submissions:', err);
+  }
 }
 
 // POST route to handle contact form submissions
@@ -59,6 +64,7 @@ app.post('/api/contact', async (req, res) => {
     });
     res.json({ success: true });
   } catch (err) {
+    console.error('Email send error:', err);
     res.status(500).json({ error: 'Failed to send email.' });
   }
 });
@@ -83,6 +89,7 @@ app.post('/api/contact-reply', async (req, res) => {
     });
     res.json({ success: true });
   } catch (err) {
+    console.error('Reply email send error:', err);
     res.status(500).json({ error: 'Failed to send reply.' });
   }
 });

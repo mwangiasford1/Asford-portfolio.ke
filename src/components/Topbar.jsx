@@ -44,26 +44,44 @@ const Topbar = () => {
   };
 
   return (
-    <nav className="topbar">
+    <nav
+      className="topbar"
+      style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 999,
+      }}
+    >
       {/* Hamburger for mobile */}
-      <button
-        className="hamburger-btn"
-        style={{
-          display: 'none',
-          background: 'none',
-          border: 'none',
-          fontSize: 28,
-          cursor: 'pointer',
-          position: 'absolute',
-          left: 18,
-          top: 18,
-          zIndex: 1200,
-        }}
-        onClick={() => setMenuOpen(true)}
-        aria-label="Open menu"
-      >
-        <FaBars />
-      </button>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <button
+          className="hamburger-btn"
+          style={{
+            display: 'none',
+            background: 'none',
+            border: 'none',
+            fontSize: 28,
+            cursor: 'pointer',
+            position: 'relative',
+            left: 0,
+            top: 0,
+            zIndex: 1200,
+            marginRight: 18,
+          }}
+          onClick={() => setMenuOpen(true)}
+          aria-label="Open menu"
+        >
+          <FaBars />
+        </button>
+        <div className="topbar-logo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 18, minWidth: 250 }}>
+          <span style={{ fontWeight: 700, fontSize: '1.2rem', letterSpacing: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} className="animated-logo">
+            {"Asford Mwangi".split("").map((char, idx) => (
+              <span key={idx} className="logo-letter" style={{ animationDelay: `${0.4 + idx * 0.12}s` }}>{char === ' ' ? '\u00A0' : char}</span>
+            ))}
+            <span className="logo-cursor">|</span>
+          </span>
+        </div>
+      </div>
       {/* Overlay menu */}
       {menuOpen && (
         <div
@@ -135,15 +153,6 @@ const Topbar = () => {
         <Link to="/collaborators" className="nav-link-collaborators">Collaborators</Link>
       </div>
       <div className="topbar-divider"></div>
-      <div className="topbar-logo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 18, minWidth: 250 }}>
-        <span style={{ fontSize: '1.5rem', fontWeight: 800, color: '#6366f1', marginRight: '2rem' }}>PORTFOLIO</span>
-        <span style={{ fontWeight: 700, fontSize: '1.2rem', letterSpacing: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }} className="animated-logo">
-          {"Asford Mwangi".split("").map((char, idx) => (
-            <span key={idx} className="logo-letter" style={{ animationDelay: `${0.4 + idx * 0.12}s` }}>{char === ' ' ? '\u00A0' : char}</span>
-          ))}
-          <span className="logo-cursor">|</span>
-        </span>
-      </div>
       {location.pathname !== '/profile' && (
         <div className="topbar-actions" style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
           <button
@@ -170,4 +179,4 @@ const Topbar = () => {
   );
 };
 
-export default Topbar; 
+export default Topbar;
